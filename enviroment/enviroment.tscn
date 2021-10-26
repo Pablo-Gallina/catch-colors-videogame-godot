@@ -4,9 +4,22 @@
 [ext_resource path="res://enviroment/path.tscn" type="PackedScene" id=2]
 
 [node name="enviroment" type="Node2D"]
-
-[node name="path" parent="." instance=ExtResource( 2 )]
-position = Vector2( 240, 304 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 240, 304 )
+position = Vector2( 336, 200 )
+
+[node name="path2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 400, 200 )
+
+[node name="path3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 200 )
+
+[node name="path4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 336, 200 )
+
+[connection signal="body_entered" from="path2" to="player" method="_on_path2_body_entered"]
+[connection signal="body_entered" from="path3" to="player" method="_on_path2_body_entered"]
+[connection signal="body_entered" from="path4" to="player" method="_on_path2_body_entered"]
