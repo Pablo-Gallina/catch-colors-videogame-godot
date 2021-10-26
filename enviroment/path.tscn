@@ -4,6 +4,7 @@
 extents = Vector2( 32, 32 )
 
 [node name="path" type="Area2D"]
+collision_mask = 2
 
 [node name="col_path" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
